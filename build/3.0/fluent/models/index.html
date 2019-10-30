@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -43,9 +43,9 @@
     
     
 	
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.750b69bd.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -57,7 +57,7 @@
 
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     <script src="../../scripts/carbon.js"></script>
 
@@ -69,6 +69,35 @@
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-76177358-4", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -127,22 +156,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Vapor Docs
-              </span>
-              <span class="md-header-nav__topic">
-                Models
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Vapor Docs
+            </span>
+            <span class="md-header-nav__topic">
+              Models
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -165,7 +191,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -176,20 +201,18 @@
 
   
 
-
-  <a href="http://github.com/vapor/vapor/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
+<a href="http://github.com/vapor/vapor/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
           </div>
         </div>
       
@@ -225,20 +248,18 @@
 
   
 
-
-  <a href="http://github.com/vapor/vapor/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
+<a href="http://github.com/vapor/vapor/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -997,6 +1018,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-and-last-update-timestamps" title="Creation and Last Update Timestamps" class="md-nav__link">
+    Creation and Last Update Timestamps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soft-delete" title="Soft Delete" class="md-nav__link">
+    Soft Delete
+  </a>
   
 </li>
       
@@ -2259,6 +2294,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#creation-and-last-update-timestamps" title="Creation and Last Update Timestamps" class="md-nav__link">
+    Creation and Last Update Timestamps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soft-delete" title="Soft Delete" class="md-nav__link">
+    Soft Delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#methods" title="Methods" class="md-nav__link">
     Methods
   </a>
@@ -2529,6 +2578,46 @@
 </pre></div>
 
 
+<h2 id="creation-and-last-update-timestamps">Creation and Last Update Timestamps<a class="headerlink" href="#creation-and-last-update-timestamps" title="Permanent link">&para;</a></h2>
+<p>Often an application requires knowing when a row / item is created or gets updated.  If the model specifies fields for storing creation and/or update timestamps, Fluent will automatically set these values.  The model simply specifies the name of the field and a matching definition.</p>
+<div class="codehilite"><pre><span></span><span class="kd">static</span> <span class="kd">let</span> <span class="nv">createdAtKey</span><span class="p">:</span> <span class="n">TimestampKey</span><span class="p">?</span> <span class="p">=</span> <span class="err">\</span><span class="p">.</span><span class="n">createdAt</span>
+<span class="kd">static</span> <span class="kd">let</span> <span class="nv">updatedAtKey</span><span class="p">:</span> <span class="n">Timestampkey</span><span class="p">?</span> <span class="p">=</span> <span class="err">\</span><span class="p">.</span><span class="n">updatedAt</span>
+
+<span class="kd">var</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="n">Date</span><span class="p">?</span>
+<span class="kd">var</span> <span class="nv">updatedAt</span><span class="p">:</span> <span class="n">Date</span><span class="p">?</span>
+</pre></div>
+
+
+<p>The presence of <code>createdAtKey</code> causes the associated field to be set when the object is created.  This field will not be subsequently changed.  The presence of <code>updatedAtKey</code> causes the associated field to be set when the object is created and whenever any update operation is performed.  A model may define one, both, or neither.</p>
+<h2 id="soft-delete">Soft Delete<a class="headerlink" href="#soft-delete" title="Permanent link">&para;</a></h2>
+<p>Fluent provides support for a two step deletion process.  A soft delete marks an existing row / item so that it does not appear in query results by default but does not remove it from the database.  This row / item may be restored at a later date or deleted entirely from the database when desired.  This can be a useful feature, but it requires some thought by the application developer.  Foreign key and uniqueness constraints in the database are impacted and query performance may be reduced by the presence of soft deleted rows.  Restoration of soft deleted rows, particularly when they are part of a complex graph, requires care to ensure that related data in other tables is in a proper state.</p>
+<p>Those warnings aside, Vapor makes soft delete easy to access and use.  A model defines <code>deletedAtKey</code> to enable soft deletes in the same manner as for the creation and update timestamps.  </p>
+<div class="codehilite"><pre><span></span><span class="kd">static</span> <span class="kd">let</span> <span class="nv">deletedAtKey</span><span class="p">:</span> <span class="n">TimestampKey</span><span class="p">?</span> <span class="p">=</span> <span class="err">\</span><span class="p">.</span><span class="n">deletedAt</span>
+
+<span class="kd">var</span> <span class="nv">deletedAt</span><span class="p">:</span> <span class="n">Date</span><span class="p">?</span>
+</pre></div>
+
+
+<p>The delete operation is now a soft delete.  The deletion timestamp is set and, if the model specifies <code>updatedAtKey</code>, the update timestamp is changed.  Soft deleted rows will no longer appear in results by default, but can be included in queries by setting <code>withSoftDeleted:true</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">User</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="n">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">).</span><span class="bp">filter</span><span class="p">(</span><span class="err">…</span><span class="p">).</span><span class="n">delete</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Restoring these rows is straightforward.</p>
+<div class="codehilite"><pre><span></span><span class="n">User</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="n">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">,</span> <span class="n">withSoftDeleted</span><span class="p">:</span><span class="kc">true</span><span class="p">).</span><span class="bp">filter</span><span class="p">(</span><span class="err">…</span><span class="p">).</span><span class="n">restore</span><span class="p">()</span>
+</pre></div>
+
+
+<p>The restore will clear the deletion timestamp and will also set the update timestamp.  The restored rows will now appear in queries as normal.</p>
+<p>Rows, both normal and soft deleted, may be permanently deleted by indicating <code>force: true</code> on the delete.</p>
+<div class="codehilite"><pre><span></span><span class="n">User</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="n">on</span><span class="p">:</span> <span class="n">conn</span><span class="p">,</span> <span class="n">withSoftDeleted</span><span class="p">:</span><span class="kc">true</span><span class="p">).</span><span class="bp">filter</span><span class="p">(</span><span class="err">…</span><span class="p">).</span><span class="n">delete</span><span class="p">(</span><span class="n">force</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If there is a desire to archive deleted rows, a better solution may be to create a separate table of deleted items and use the <code>willDelete</code> lifecycle method to copy the row into the archive table.</p>
+</div>
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <p><code>Model</code> offers some convenience methods to make working with it easier.</p>
 <h3 id="require-id">Require ID<a class="headerlink" href="#require-id" title="Permanent link">&para;</a></h3>
@@ -2618,7 +2707,6 @@
           Material for MkDocs</a>
       </div>
       
-        
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
@@ -2630,21 +2718,15 @@
     
   </div>
 
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      <script src="../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
-      
-    
-    
-      
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-76177358-4","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
       
     
   </body>
